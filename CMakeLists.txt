@@ -1,0 +1,62 @@
+cmake_minimum_required(VERSION 3.22)
+project(Forkbench VERSION 0.1.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Options
+option(FORKBENCH_BUILD_BENCHMARKS "Build benchmark executables" ON)
+option(FORKBENCH_BUILD_TESTS "Build tests" OFF)
+option(FORKBENCH_ENABLE_AVX512 "Enable AVX512 kernels (only if CPU supports)" OFF)
+
+# Output directories
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
+# Source files
+set(FORKBENCH_SOURCES
+    src/devices/cpu/cpu_device.cpp
+    src/core/forkbench.cpp
+)
+
+# Main library
+add_library(forkbench STATIC ${FORKBENCH_SOURCES})
+target_include_directories(forkbench PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
+
+# === Safe Vector Flags ===
+target_compile_options(forkbench PRIVATE -mavx2 -mfma -march=native)
+
+if(FORKBENCH_ENABLE_AVX512)
+    target_compile_options(forkbench PRIVATE -mavx512f -mavx512dq)
+    target_compile_definitions(forkbench PRIVATE FORKBENCH_ENABLE_AVX512)
+endif()
+
+# Platform definitions
+if(WIN32)
+    target_compile_definitions(forkbench PUBLIC FORKBENCH_WINDOWS)
+elseif(UNIX)
+    target_compile_definitions(forkbench PUBLIC FORKBENCH_LINUX)
+endif()
+
+# Link pthread on Linux
+if(UNIX AND NOT APPLE)
+    target_link_libraries(forkbench PUBLIC pthread)
+endif()
+
+# Subdirectories
+if(FORKBENCH_BUILD_BENCHMARKS)
+    add_subdirectory(benchmarks)
+endif()
+
+if(FORKBENCH_BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
+
+# Install rules
+install(DIRECTORY include/forkbench DESTINATION include)
+install(TARGETS forkbench ARCHIVE DESTINATION lib)

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/forkbench_cpu_bench.dir/main.cpp.o -o ../bin/forkbench_cpu_bench  ../lib/libforkbench.a -lpthread 

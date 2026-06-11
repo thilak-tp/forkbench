@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libforkbench.a CMakeFiles/forkbench.dir/src/devices/cpu/cpu_device.cpp.o CMakeFiles/forkbench.dir/src/core/forkbench.cpp.o
+/usr/bin/ranlib lib/libforkbench.a
