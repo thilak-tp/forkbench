@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o"
+  "CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o.d"
   "CMakeFiles/forkbench.dir/src/core/forkbench.cpp.o"
   "CMakeFiles/forkbench.dir/src/core/forkbench.cpp.o.d"
   "CMakeFiles/forkbench.dir/src/devices/cpu/cpu_device.cpp.o"
   "CMakeFiles/forkbench.dir/src/devices/cpu/cpu_device.cpp.o.d"
+  "CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o"
+  "CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o.d"
   "lib/libforkbench.a"
   "lib/libforkbench.pdb"
 )

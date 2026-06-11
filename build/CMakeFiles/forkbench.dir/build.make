@@ -97,19 +97,51 @@ CMakeFiles/forkbench.dir/src/core/forkbench.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/forkbench.dir/src/core/forkbench.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/coding/forkbench/forkbench/src/core/forkbench.cpp -o CMakeFiles/forkbench.dir/src/core/forkbench.cpp.s
 
+CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o: CMakeFiles/forkbench.dir/flags.make
+CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o: /usr/coding/forkbench/forkbench/src/analysis/statistics.cpp
+CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o: CMakeFiles/forkbench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/usr/coding/forkbench/forkbench/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o -MF CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o.d -o CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o -c /usr/coding/forkbench/forkbench/src/analysis/statistics.cpp
+
+CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/coding/forkbench/forkbench/src/analysis/statistics.cpp > CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.i
+
+CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/coding/forkbench/forkbench/src/analysis/statistics.cpp -o CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.s
+
+CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o: CMakeFiles/forkbench.dir/flags.make
+CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o: /usr/coding/forkbench/forkbench/src/orchestration/benchmark_runner.cpp
+CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o: CMakeFiles/forkbench.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/usr/coding/forkbench/forkbench/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o -MF CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o.d -o CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o -c /usr/coding/forkbench/forkbench/src/orchestration/benchmark_runner.cpp
+
+CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/coding/forkbench/forkbench/src/orchestration/benchmark_runner.cpp > CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.i
+
+CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/coding/forkbench/forkbench/src/orchestration/benchmark_runner.cpp -o CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.s
+
 # Object files for target forkbench
 forkbench_OBJECTS = \
 "CMakeFiles/forkbench.dir/src/devices/cpu/cpu_device.cpp.o" \
-"CMakeFiles/forkbench.dir/src/core/forkbench.cpp.o"
+"CMakeFiles/forkbench.dir/src/core/forkbench.cpp.o" \
+"CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o" \
+"CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o"
 
 # External object files for target forkbench
 forkbench_EXTERNAL_OBJECTS =
 
 lib/libforkbench.a: CMakeFiles/forkbench.dir/src/devices/cpu/cpu_device.cpp.o
 lib/libforkbench.a: CMakeFiles/forkbench.dir/src/core/forkbench.cpp.o
+lib/libforkbench.a: CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o
+lib/libforkbench.a: CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o
 lib/libforkbench.a: CMakeFiles/forkbench.dir/build.make
 lib/libforkbench.a: CMakeFiles/forkbench.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/usr/coding/forkbench/forkbench/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library lib/libforkbench.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/usr/coding/forkbench/forkbench/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library lib/libforkbench.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/forkbench.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/forkbench.dir/link.txt --verbose=$(VERBOSE)
 

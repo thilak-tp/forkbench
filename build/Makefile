@@ -187,6 +187,30 @@ forkbench_cpu_bench/fast:
 	$(MAKE) $(MAKESILENT) -f benchmarks/CMakeFiles/forkbench_cpu_bench.dir/build.make benchmarks/CMakeFiles/forkbench_cpu_bench.dir/build
 .PHONY : forkbench_cpu_bench/fast
 
+src/analysis/statistics.o: src/analysis/statistics.cpp.o
+.PHONY : src/analysis/statistics.o
+
+# target to build an object file
+src/analysis/statistics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.o
+.PHONY : src/analysis/statistics.cpp.o
+
+src/analysis/statistics.i: src/analysis/statistics.cpp.i
+.PHONY : src/analysis/statistics.i
+
+# target to preprocess a source file
+src/analysis/statistics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.i
+.PHONY : src/analysis/statistics.cpp.i
+
+src/analysis/statistics.s: src/analysis/statistics.cpp.s
+.PHONY : src/analysis/statistics.s
+
+# target to generate assembly for a file
+src/analysis/statistics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/analysis/statistics.cpp.s
+.PHONY : src/analysis/statistics.cpp.s
+
 src/core/forkbench.o: src/core/forkbench.cpp.o
 .PHONY : src/core/forkbench.o
 
@@ -235,6 +259,30 @@ src/devices/cpu/cpu_device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/devices/cpu/cpu_device.cpp.s
 .PHONY : src/devices/cpu/cpu_device.cpp.s
 
+src/orchestration/benchmark_runner.o: src/orchestration/benchmark_runner.cpp.o
+.PHONY : src/orchestration/benchmark_runner.o
+
+# target to build an object file
+src/orchestration/benchmark_runner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.o
+.PHONY : src/orchestration/benchmark_runner.cpp.o
+
+src/orchestration/benchmark_runner.i: src/orchestration/benchmark_runner.cpp.i
+.PHONY : src/orchestration/benchmark_runner.i
+
+# target to preprocess a source file
+src/orchestration/benchmark_runner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.i
+.PHONY : src/orchestration/benchmark_runner.cpp.i
+
+src/orchestration/benchmark_runner.s: src/orchestration/benchmark_runner.cpp.s
+.PHONY : src/orchestration/benchmark_runner.s
+
+# target to generate assembly for a file
+src/orchestration/benchmark_runner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forkbench.dir/build.make CMakeFiles/forkbench.dir/src/orchestration/benchmark_runner.cpp.s
+.PHONY : src/orchestration/benchmark_runner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,12 +297,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... forkbench"
 	@echo "... forkbench_cpu_bench"
+	@echo "... src/analysis/statistics.o"
+	@echo "... src/analysis/statistics.i"
+	@echo "... src/analysis/statistics.s"
 	@echo "... src/core/forkbench.o"
 	@echo "... src/core/forkbench.i"
 	@echo "... src/core/forkbench.s"
 	@echo "... src/devices/cpu/cpu_device.o"
 	@echo "... src/devices/cpu/cpu_device.i"
 	@echo "... src/devices/cpu/cpu_device.s"
+	@echo "... src/orchestration/benchmark_runner.o"
+	@echo "... src/orchestration/benchmark_runner.i"
+	@echo "... src/orchestration/benchmark_runner.s"
 .PHONY : help
 
 
